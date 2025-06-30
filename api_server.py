@@ -1,16 +1,17 @@
 import os
 import urllib.request
+import joblib
 
 model_path = "health_risk_model.pkl"
 
 if not os.path.exists(model_path):
     print("Downloading model file...")
-  url = "https://drive.google.com/uc?export=download&id=1Y4aDtU0UPSeQmZr6J65h95jhIht6IxOo"
-
+    url = "https://drive.google.com/uc?export=download&id=1Y4aDtU0UPSeQmZr6J65h95jhIht6IxOo"
     urllib.request.urlretrieve(url, model_path)
     print("Model downloaded!")
 
 model = joblib.load(model_path)
+
 
 
 
