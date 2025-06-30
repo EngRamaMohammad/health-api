@@ -5,7 +5,8 @@ model_path = "health_risk_model.pkl"
 
 if not os.path.exists(model_path):
     print("Downloading model file...")
-    url = "YOUR_DIRECT_DOWNLOAD_LINK"  # استبدليه بالرابط المباشر
+  url = "https://drive.google.com/uc?export=download&id=1Y4aDtU0UPSeQmZr6J65h95jhIht6IxOo"
+
     urllib.request.urlretrieve(url, model_path)
     print("Model downloaded!")
 
