@@ -1,3 +1,18 @@
+import os
+import urllib.request
+
+model_path = "health_risk_model.pkl"
+
+if not os.path.exists(model_path):
+    print("Downloading model file...")
+    url = "YOUR_DIRECT_DOWNLOAD_LINK"  # استبدليه بالرابط المباشر
+    urllib.request.urlretrieve(url, model_path)
+    print("Model downloaded!")
+
+model = joblib.load(model_path)
+
+
+
 from flask import Flask, request, jsonify
 import joblib
 import numpy as np
