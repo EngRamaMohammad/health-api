@@ -6,7 +6,7 @@ model_path = "health_risk_model.pkl"
 
 if not os.path.exists(model_path):
     print("Downloading model file...")
-    url = "https://drive.google.com/uc?export=download&id=1Y4aDtU0UPSeQmZr6J65h95jhIht6IxOo"
+    url = "https://www.dropbox.com/scl/fi/8opvi7726w54wwtfb82kq/health_risk_model.pkl?rlkey=ijpj1nbxxl5nek7pu08dhsz44&st=pyw034ex&dl=1"
     urllib.request.urlretrieve(url, model_path)
     print("Model downloaded!")
 
