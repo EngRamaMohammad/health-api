@@ -9,7 +9,7 @@ app = Flask(__name__)
 model_path = "health_risk_model.pkl"
 if not os.path.exists(model_path):
     print("Downloading model file...")
-    url = "https://www.dropbox.com/scl/fi/8opvi7726w54wwtfb82kq/health_risk_model.pkl?rlkey=ijpj1nbxxl5nek7pu08dhsz44&st=pyw034ex&dl=1"
+    url = "https://www.dropbox.com/scl/fi/usovac3my47p86i03ua76/health_risk_model.pkl?rlkey=fxwzsm3jj0ltei9li90ulimb2&st=8s1qyzmx&dl=1"
     urllib.request.urlretrieve(url, model_path)
     print("Model downloaded!")
 
