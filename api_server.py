@@ -1,9 +1,12 @@
 import os
 import urllib.request
 import joblib
+from flask import Flask, request, jsonify
+import numpy as np
+
+app = Flask(__name__)
 
 model_path = "health_risk_model.pkl"
-
 if not os.path.exists(model_path):
     print("Downloading model file...")
     url = "https://www.dropbox.com/scl/fi/8opvi7726w54wwtfb82kq/health_risk_model.pkl?rlkey=ijpj1nbxxl5nek7pu08dhsz44&st=pyw034ex&dl=1"
@@ -12,17 +15,6 @@ if not os.path.exists(model_path):
 
 model = joblib.load(model_path)
 
-
-
-
-from flask import Flask, request, jsonify
-import joblib
-import numpy as np
-
-app = Flask(__name__)
-
-# Load the trained model once when the server starts
-model = joblib.load("health_risk_model.pkl")
 
 # Function to determine possible causes
 def get_possible_causes(reading):
